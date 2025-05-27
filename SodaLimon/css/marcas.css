@@ -174,16 +174,20 @@ body {
   margin-bottom: 10px;
   color: #333;
 }
-.textoMarcas{
-    margin-top: 5%;
+
+ 
+
+
+.Marcastext{
+  font-family: Arial, sans-serif;
+  font-size: 75px;
+    font-weight: 700; 
+  margin-top: 3%;
     display: flex;
     align-items: center;
     justify-content: center ;
-    font-size: 2.8rem;
- 
+    text-align: center;  
 
-}
-.aniAbajo{
   opacity: 0;
 transform: rotateY(-50%);
 animation: bajarH1 0.9s ease-out forwards;   
@@ -203,18 +207,76 @@ animation: bajarH1 0.9s ease-out forwards;
 
 
 .iconosMarcas{
-margin-top: 6%;
+margin-top: 4%;
   display: flex;
     align-items: center;
     justify-content: center ;  
     border-radius: 20px;
-    
+padding: 40px;
+
+margin: auto;    
 }  
 .imgMarca{
+
 opacity: 0;
 animation: aparecer 1.2s ease-in-out forwards ;
 border-radius: 2%;
+
+
 }
+/*responsive*/
+@media (max-width:1459px){
+.imgMarca{
+  width: 60%;
+  background-color: #00ffff;
+
+  
+}
+.iconosMarcas{
+
+  display: flex;
+   width: 60%;
+ margin-bottom: 37%;
+
+    
+}  
+
+
+  
+    
+}  
+/*responsive para celular*/
+@media (max-width:600px){
+.imgMarca{
+width: 220px;
+ height: auto;
+ display: block;
+
+  
+}
+.iconosMarcas{
+
+  display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 20px;
+   justify-items: center;
+ margin-bottom: 37%;
+
+    
+}  
+.iconosMarcas img:nth-child(3){
+
+
+grid-column: span 2;
+display: flex;
+justify-content: center;
+}
+   
+}  
+/*responsive celular*/
+
+
+
 @keyframes aparecer{
   0%{
     opacity: 0;
@@ -223,6 +285,10 @@ border-radius: 2%;
     opacity: 1;
   }
 }
+.imgMarca:hover{
+  transform: scale(1.05);
+}
+
 
 
 /* ==== FOOTER ==== */
